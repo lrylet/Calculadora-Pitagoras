@@ -17,3 +17,5 @@ A única parte do desafio que não consegui desenvolver até o momento foi conse
 A diferença de funcionalidade entre os dois foi a sanitização dos inputs, não permitindo a entrada de letras e caracteres especiais. Isso foi feito visando eliminar a possibilidade de entradas negativas. Entretanto, deixei possível a entrada de ponto e vírgula, visando deixar possível contas com números racionais. Não consegui limitar apenas ao ponto, visto que a vírgula, ao passar para a função, não é reconhecida para os cálculos e a função de verificação assimila como NaN.
 
 No mais, foi feito uma verificação de inputs nulos ao tentar enviar para a requisição, evitando-os e deixando uma mensagem de erro ao usuário. Também foi feito um esquema para que não se permita hipotenusas menores que os lados, deixando claro ao usuário que o Teorema estará sendo utilizado erroneamente.
+
+No React, a responsividade funciona bem até a resolução de tela 768x600.
