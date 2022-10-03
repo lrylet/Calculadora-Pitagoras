@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Calculadora Pitagórica
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O objetivo dessa aplicação era de tornar possível calcular qualquer lado de um triângulo retângulo, deixando a critério do usuário escolher qual dos lados deseja saber o resultado.
 
-## Available Scripts
+Em primeira instância, foi criado um código em Javascript, HTML e CSS, de modo mais básico e manual.
 
-In the project directory, you can run:
+Na sequência, desenvolvi a aplicação em React, utilizando o framework de estilização chamado Tailwind CSS, na tentativa de agilizar o trabalho e tornar a produção e estilização, que são simples, mais ágeis.
 
-### `npm start`
+Por último, fiz o deploy da calculadora no servidor do Heroku, que pode ser acessado através deste link: https://calculadora-pit.herokuapp.com/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A única parte do desafio que não consegui desenvolver até o momento foi conseguir que a requisição dos cálculos fosse consumida, como foi sugerido de ser feito com Python3 e Django ou Flask. Ainda estou estudando para tentar aplicar esses conceitos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<hr>
 
-### `npm test`
+  ## Sobre o que foi realizado em Javascript vs React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A diferença de funcionalidade entre os dois foi a sanitização dos inputs, não permitindo a entrada de letras e caracteres especiais. Isso foi feito visando eliminar a possibilidade de entradas negativas. Entretanto, deixei possível a entrada de ponto e vírgula, visando deixar possível contas com números racionais. Não consegui limitar apenas ao ponto, visto que a vírgula, ao passar para a função, não é reconhecida para os cálculos e a função de verificação assimila como NaN.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+No mais, foi feito uma verificação de inputs nulos ao tentar enviar para a requisição, evitando-os e deixando uma mensagem de erro ao usuário. Também foi feito um esquema para que não se permita hipotenusas menores que os lados, deixando claro ao usuário que o Teorema estará sendo utilizado erroneamente.
